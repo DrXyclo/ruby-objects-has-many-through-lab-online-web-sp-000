@@ -33,6 +33,7 @@ end ### end of Doctor class~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class Patient
   attr_accessor :patient_name, :appointments
   
+<<<<<<< HEAD
   @@all_Patients = []
   
   def initialize(patient_name)
@@ -60,6 +61,18 @@ class Patient
     end
    doctors
   end
+=======
+  def initialize(patient_name)
+    @patient_name = patient_name
+    @appointments = []
+  end
+  
+  def new_appointment(doctor_name, appt_date)
+    self.appointments << Appointments.new(doctor_name, appt_date, patient_name)
+    binding.pry
+  end
+  
+>>>>>>> 81b81975d6b5a846a7c7244ce4316af86dea0e27
   
 end ### end of Patient class~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -81,6 +94,7 @@ class Appointments
     @@all_Appointments
   end
   
+<<<<<<< HEAD
 
   
 end ### end of Appointments class
@@ -97,3 +111,8 @@ The Patient class needs an instance method, #doctors, that iterates over that pa
   end
 
 =end
+=======
+  
+  
+end ### end of Appointments class~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>>>>>>> 81b81975d6b5a846a7c7244ce4316af86dea0e27

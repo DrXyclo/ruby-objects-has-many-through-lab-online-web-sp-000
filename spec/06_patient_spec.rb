@@ -12,10 +12,15 @@ describe 'Patient' do
       doctor_who = Doctor.new('The Doctor')
       hevydevy = Patient.new('Devin Townsend')
       appointment = hevydevy.new_appointment(doctor_who, 'Friday, January 32nd')
-
+# binding.pry
       expect(hevydevy.appointments).to include(appointment)
+<<<<<<< HEAD
 
       expect(appointment.patient_name).to eq(hevydevy)
+=======
+      # binding.pry
+      expect(appointments.patient_name).to eq(hevydevy)
+>>>>>>> 81b81975d6b5a846a7c7244ce4316af86dea0e27
     end
   end
 
